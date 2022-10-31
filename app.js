@@ -1,19 +1,12 @@
-let answer = Math.floor(100* Math.random());
-let n1=0;
-let n2=99;
-
-while (true) {
-    let guess = prompt('Make your guess: (between ' +n1+' and '+n2 +')');
-    if(guess<n1||guess>n2||isNaN(guess)){
-        alert('please make a valid input.');
-        continue;
+function makeStars(n){
+    let ans = '*';
+    for (let i =2; i<=n; i++){
+        let s = '\n';
+        for (let j =0; j<i; j++){
+            s+='*';
+        }
+        ans+=s;
     }
-    if(guess == answer) {
-        alert('you got it right');
-        break;
-    } else if(guess<=answer){
-        n1=guess;
-    } else if(guess>answer){
-        n2=guess;
-    }
+    console.log(ans);
 }
+makeStars(4)
