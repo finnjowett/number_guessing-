@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+i {
+    pointer-events: none;
+}
+body{
+    background: linear-gradient(90deg,rgb(24, 25, 28),rgb(129, 134, 131));
+}
+header{
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1{
+        color: white;
+        font-size: 3rem;
+    }
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    input,button{
+        border: none;
+        padding: 0.2rem 0.5rem;
+        font-size: 1.5rem;
+        margin: 0.2rem;
+        cursor: pointer;
+        text-align: center;
+        font-style: italic;
+    }
+    button{
+        background-color: white;
+    }
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    div.todo{
+        width: 30vw;
+        display: flex;
+        align-items: center;
+        transition: all 0.5s ease;
+        button{
+            padding: 0.168rem 0.5rem;
+            font-size: 1.2rem;
+            border: none;
+            cursor: pointer;
+            background-color: white;
+            color: white;
+        }
+        .complete{
+            background-color: rgb(79, 122, 79);
+        }
+        .trash{
+            background-color: rgb(178, 56, 56);
+        }
+        p{
+            background-color: white;
+            padding: 0.3rem 0.5rem;
+            color: black;
+            .todo-text,.todo-time{
+                font-size: 1.2rem;
+                margin: 0.1rem;
+            }
+        }
+        .todo-text{
+            width: 50%;
+        }
+        .todo-time{
+            text-align: center;
+        }
+    }
+    
+}
+.done {opacity: 0.5;
+text-decoration: line-through;
+}
+@keyframes scaleUp {
+    from {
+        transform:scale(0)
+    }
+    to {
+        transform: scale(1);
+    }
+}
+@keyframes scaleDown {
+    from {
+        transform:scale(1)
+    }
+    to {
+        transform: scale(0);
+    }
+}
+@media screen and (max-width:900px) {
+    .todo-text,.todo-time{
+        font-size: 0.7rem;
+        margin: 0.1rem;
+    }
+    .todo{
+        flex-wrap: wrap;
+    }
+}
