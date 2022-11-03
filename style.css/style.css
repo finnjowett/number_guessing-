@@ -129,4 +129,18 @@ section div.todo .todo-time {
   .todo {
     flex-wrap: wrap;
   }
+}
+div.sort {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0rem;
+}
+div.sort button {
+  padding: 0.168rem 0.5rem;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  color: black;
 }/*# sourceMappingURL=style.css.map */
